@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--pour les url de context on peut les trouver dans spring.schemas-->
 <beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd" default-autowire="byType">
 
-
+    <context:annotation-config/>
+    <context:property-placeholder/>
     <bean class="com.filRouge.dvdStore.controller.MovieController">
-        <property name="movieService" ref="movieService" />
+<!--        <property name="movieService" ref="movieService" />-->
     </bean>
     <bean id="movieService" class="com.filRouge.dvdStore.service.DefaultMovieService">
-        <property name="movieRepository" ref="movieRepository"/>
-        <property name="goLiveMovieRepository" ref="goLiveMovieRepository"/>
+<!--        <property name="movieRepository" ref="movieRepository"/>-->
+<!--        <property name="goLiveMovieRepository" ref="goLiveMovieRepository"/>-->
     </bean>
     <bean id="movieRepository" class="com.filRouge.dvdStore.repository.MemoryMovieRepository"/>
 
     <bean id="goLiveMovieRepository" class="com.filRouge.dvdStore.repository.FileMovieRepository">
-    <property name="file" value="C:\\temp\\movies.csv"/>
+<!--    <property name="file" value="C:\\temp\\movies.csv"/>-->
 
     </bean>
 

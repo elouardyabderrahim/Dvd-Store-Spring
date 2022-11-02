@@ -3,12 +3,14 @@ package com.filRouge.dvdStore.controller;
 import com.filRouge.dvdStore.entity.Movie;
 
 import com.filRouge.dvdStore.service.MovieServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Scanner;
 
 public class MovieController {
 //    private MovieService movieService=new MovieService();
-private MovieServiceInterface movieService;
+    @Autowired(required=true)
+    private MovieServiceInterface movieService;
 
     public MovieServiceInterface getMovieService() {
         return movieService;
