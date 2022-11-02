@@ -8,6 +8,7 @@ import com.filRouge.dvdStore.service.DefaultMovieService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 import java.util.Scanner;
 
 /**
@@ -19,7 +20,7 @@ public class App {
     public static void main( String[] args )
     {
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        System.out.println("chouse the console'1' or the live '2'");
+        System.out.println("chose the console'1' or the live '2'");
         Scanner scn= new Scanner(System.in);
         String choice = scn.nextLine();
 
