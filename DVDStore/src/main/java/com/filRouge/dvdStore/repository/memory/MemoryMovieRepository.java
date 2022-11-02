@@ -1,9 +1,12 @@
-package com.filRouge.dvdStore.repository;
+package com.filRouge.dvdStore.repository.memory;
 
 import com.filRouge.dvdStore.entity.Movie;
+import com.filRouge.dvdStore.repository.MovieRepositoryInterface;
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class MemoryMovieRepository implements MovieRepositoryInterface {
     public void add (Movie movie){
 

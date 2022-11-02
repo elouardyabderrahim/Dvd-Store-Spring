@@ -1,11 +1,12 @@
 package com.filRouge.dvdStore.service;
 
 import com.filRouge.dvdStore.entity.Movie;
-import com.filRouge.dvdStore.repository.FileMovieRepository;
 import com.filRouge.dvdStore.repository.GoLiveMovieRepositoryInterface;
 import com.filRouge.dvdStore.repository.MovieRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DefaultMovieService implements MovieServiceInterface {
 //On peut mettre cette annotation sur le stter pour forcer Spring a passer par le setter
     @Autowired(required=true)

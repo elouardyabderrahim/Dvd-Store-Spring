@@ -6,23 +6,29 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd" default-autowire="byType">
+        http://www.springframework.org/schema/context/spring-context.xsd" >
 
     <context:annotation-config/>
     <context:property-placeholder/>
-    <bean class="com.filRouge.dvdStore.controller.MovieController">
-<!--        <property name="movieService" ref="movieService" />-->
-    </bean>
+    <context:component-scan base-package="com.filRouge.dvdStore.controller"/>
+    <context:component-scan base-package="com.filRouge.dvdStore.repository.memory"/>
+    <context:component-scan base-package="com.filRouge.dvdStore.repository.file"/>
+    <context:component-scan base-package="com.filRouge.dvdStore.service"/>
+<!--    <context:component-scan base-package=""/>-->
+
+<!--    <bean class="com.filRouge.dvdStore.controller.MovieController">
+  <property name="movieService" ref="movieService" />
+   </bean>
     <bean id="movieService" class="com.filRouge.dvdStore.service.DefaultMovieService">
-<!--        <property name="movieRepository" ref="movieRepository"/>-->
-<!--        <property name="goLiveMovieRepository" ref="goLiveMovieRepository"/>-->
+        <property name="movieRepository" ref="movieRepository"/>
+        <property name="goLiveMovieRepository" ref="goLiveMovieRepository"/>
     </bean>
-    <bean id="movieRepository" class="com.filRouge.dvdStore.repository.MemoryMovieRepository"/>
+    <bean id="movieRepository" class="com.filRouge.dvdStore.repository.memory.MemoryMovieRepository"/>
 
-    <bean id="goLiveMovieRepository" class="com.filRouge.dvdStore.repository.FileMovieRepository">
-<!--    <property name="file" value="C:\\temp\\movies.csv"/>-->
+    <bean id="goLiveMovieRepository" class="com.filRouge.dvdStore.repository.file.FileMovieRepository">
+    <property name="file" value="C:\\temp\\movies.csv"/>
 
-    </bean>
+    </bean>-->
 
 
 

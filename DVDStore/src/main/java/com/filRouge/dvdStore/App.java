@@ -2,9 +2,6 @@ package com.filRouge.dvdStore;
 
 
 import com.filRouge.dvdStore.controller.MovieController;
-import com.filRouge.dvdStore.repository.FileMovieRepository;
-import com.filRouge.dvdStore.repository.MemoryMovieRepository;
-import com.filRouge.dvdStore.service.DefaultMovieService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
