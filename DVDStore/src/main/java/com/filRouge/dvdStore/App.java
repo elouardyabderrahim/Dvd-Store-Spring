@@ -3,7 +3,8 @@ package com.filRouge.dvdStore;
 
 import com.filRouge.dvdStore.controller.MovieController;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 
 import java.util.Scanner;
@@ -16,7 +17,9 @@ public class App {
 
     public static void main( String[] args )
     {
-        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+//        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context= new AnnotationConfigApplicationContext(AppConfig.class);
+
         System.out.println("chose the console'1' or the live '2'");
         Scanner scn= new Scanner(System.in);
         String choice = scn.nextLine();
