@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 @Controller
 public class MovieController {
-//    private MovieService movieService=new MovieService();
-    @Autowired(required=true)
+
+    @Autowired
     private MovieServiceInterface movieService;
 
     public MovieServiceInterface getMovieService() {

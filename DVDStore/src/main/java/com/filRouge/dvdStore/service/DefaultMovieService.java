@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DefaultMovieService implements MovieServiceInterface {
-//On peut mettre cette annotation sur le stter pour forcer Spring a passer par le setter
-    @Autowired(required=true)
+
+    @Autowired
     private MovieRepositoryInterface movieRepository;
-//    private MovieRepository movieRepository=new MovieRepository();
+
 
 
     public MovieRepositoryInterface getMovieRepository() {
@@ -27,7 +27,7 @@ public class DefaultMovieService implements MovieServiceInterface {
 
 
     }
-    @Autowired(required=true)
+    @Autowired
     private GoLiveMovieRepositoryInterface goLiveMovieRepository;
 
     public GoLiveMovieRepositoryInterface getGoLiveMovieRepository() {

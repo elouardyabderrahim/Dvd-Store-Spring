@@ -2,7 +2,6 @@ package com.filRouge.dvdStore.repository.file;
 
 import com.filRouge.dvdStore.entity.Movie;
 import com.filRouge.dvdStore.repository.GoLiveMovieRepositoryInterface;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +11,8 @@ import java.io.IOException;
 
 @Repository
 public class FileMovieRepository implements GoLiveMovieRepositoryInterface {
-    @Autowired(required=true)
+
+    @Value("${movies.file.location}")
      private File file;
 
     public File getFile() {

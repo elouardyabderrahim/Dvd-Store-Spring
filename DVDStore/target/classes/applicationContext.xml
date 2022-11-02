@@ -9,6 +9,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd" >
 
 
+
 <!--    <context:property-placeholder location="classpath:applicationContext.xml"/>-->
 <!--    <context:component-scan base-package="com.filRouge.dvdStore.controller"/>
   <context:component-scan base-package="com.filRouge.dvdStore.repository.memory"/>
