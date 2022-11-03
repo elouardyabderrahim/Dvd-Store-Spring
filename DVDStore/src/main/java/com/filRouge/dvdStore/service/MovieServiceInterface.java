@@ -1,12 +1,11 @@
 package com.filRouge.dvdStore.service;
 
 import com.filRouge.dvdStore.entity.Movie;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 public interface MovieServiceInterface {
-
     void registerMovie(Movie movie);
-    void registerMovieInFile(Movie movie);
+    List<Movie> getMovieList();
 }
