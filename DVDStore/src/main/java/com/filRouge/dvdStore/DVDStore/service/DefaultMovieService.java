@@ -30,6 +30,10 @@ public class DefaultMovieService implements MovieServiceInterface{
     public List<Movie> getMovieList() {
         return movieRepository.list();
     }
+
+    public Movie getMovieById(long id){
+        return movieRepository.getById(id);
+    }
 }
 
 
