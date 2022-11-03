@@ -7,13 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DVDStore" />
+        <module name="DVDStore-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="17">
+      <module name="demo" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="DVDStore" options="-parameters" />
+      <module name="DVDStore" options="" />
+      <module name="DVDStore-web" options="-parameters" />
+      <module name="demo" options="-parameters" />
     </option>
   </component>
 </project>
