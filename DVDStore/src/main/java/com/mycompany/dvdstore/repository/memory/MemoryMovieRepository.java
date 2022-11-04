@@ -24,7 +24,7 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
 
 
     @Override
-    public Movie getById(Long id) {
+    public Movie getById(long id) {
         return movies.stream().
                 filter(m -> m.getId()==id).
                 findFirst().get();
