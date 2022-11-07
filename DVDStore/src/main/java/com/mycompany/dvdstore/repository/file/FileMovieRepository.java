@@ -148,4 +148,9 @@ public class FileMovieRepository implements MovieRepositoryInterface {
     public void setFile(File file) {
         this.file = file;
     }
+
+    @Override
+    public Movie getMovieById(long id) {
+        return null;
+    }
 }
