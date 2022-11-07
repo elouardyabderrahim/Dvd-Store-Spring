@@ -1,20 +1,10 @@
 package com.mycompany.dvdstore.repository;
 
-import com.mycompany.dvdstore.entity.Movie;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Repository;
-
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import java.util.List;
-
+/*
 @Repository
 public class MovieRepository implements MovieRepositoryInterface{
 
-    @Autowired
+   @Autowired
     private JdbcTemplate jdbcTemplate;
 
 
@@ -48,4 +38,4 @@ public class MovieRepository implements MovieRepositoryInterface{
                 (rs,rowNum)-> new Movie(rs.getLong("ID"),
                         rs.getString("TITLE"),rs.getString("GENRE"),rs.getString("DESCRIPTION")));
     }
-}
+}*/
