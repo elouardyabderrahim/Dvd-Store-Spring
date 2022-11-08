@@ -1,6 +1,8 @@
 package com.mycompany.dvdstore.entity;
 
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 
 @Entity

@@ -4,13 +4,13 @@ import com.mycompany.dvdstore.entity.Movie;
 import com.mycompany.dvdstore.repository.MovieRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
-public class DefaultMovieService implements MovieServiceInterface {
-
+public class DefaultMovieService implements MovieServiceInterface{
 
     @Autowired
     private MovieRepositoryInterface movieRepository;
@@ -23,6 +23,7 @@ public class DefaultMovieService implements MovieServiceInterface {
         this.movieRepository = movieRepository;
     }
 
+    @Transactional
     public Movie registerMovie(Movie movie){
         return movieRepository.save(movie);
     }
@@ -39,13 +40,10 @@ public class DefaultMovieService implements MovieServiceInterface {
             throw new NoSuchElementException();
         }
         Movie movie=optionalMovie.get();
-        //Initialize proxys
-        movie.getMainActor().getFirstName();
-        movie.getReviews().forEach(review -> {
-            review.getMark();
-            review.setMovie(null);
-        });
-        //
+
+        movie.getReviews().forEach(review ->
+                review.setMovie(null)
+        );
 
         return movie;
     }
